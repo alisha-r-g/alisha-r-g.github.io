@@ -1,13 +1,31 @@
-@font-face{
-    font-family: funfont;
-    src: url(font.ttf);
-    }
-P {
-    
-    font-family:Arial, Helvetica, sans-serif
+@keyframes stretch {
+  0% { background-color: pink;}
+  25% { background-color: rgb(220, 28, 159);}
+  50% { background-color: rgb(207, 50, 205);}
+  75% { background-color: rgb(103, 74, 198);}
+  100% { background-color: rgb(21, 0, 248);}
 }
 img {
     width: 50%;
+}
+body {
+    background-color: #c837b9;
+    color: rgb(34, 7, 39);
+    
+}
+
+.green {
+  animation-name: stretch;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-delay: 0ms;
+}
+
+body.dark-mode{
+    background-color: #333;
+    color: aqua;
+    
 }
 td {
     width: 33%;
@@ -18,7 +36,7 @@ tr {
 /* Add a black background color to the top navigation */
 .topnav {
     position: relative;
-    background-color: #5d1c76;
+    background-color: #0412aa;
     overflow: hidden;
   }
   
@@ -40,7 +58,7 @@ tr {
   
   /* Add a color to the active/current link */
   .topnav a.active {
-    background-color: #0412aa;
+    background-color: rgb(229, 86, 189);
     color: white;
   }
   
@@ -72,3 +90,61 @@ tr {
       transform: none;
     }
   }
+
+  /* Add a black background color to the top navigation */
+.topnav2 {
+  position: relative;
+  background-color: #ec8338;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav2 a {
+  float: left;
+  color: #000000;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav2 a:hover {
+  background-color: #f3f788;
+  color: rgb(229, 86, 193);
+}
+
+/* Add a color to the active/current link */
+.topnav2 a.active {
+  background-color: rgb(255, 251, 36);
+  color: rgb(0, 0, 0);
+}
+
+/* Centered section inside the top navigation */
+.topnav2-centered a {
+  float: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Right-aligned section inside the top navigation */
+.topnav2-right {
+  float: right;
+}
+
+/* Responsive navigation menu - display links on top of each other instead of next to each other (for mobile devices) */
+@media screen and (max-width: 600px) {
+  .topnav2 a, .topnav-right {
+    float: none;
+    display: block;
+  }
+
+  .topnav2-centered a {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
+  }
+}
