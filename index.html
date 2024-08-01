@@ -2,25 +2,53 @@
 <html lang="en-US">
     <head>
         <meta charset="utf-8"/>
-        <title>Dogs & Puppies</title>
+        <title>Dogtionary</title>
         <link rel="stylesheet" href="index.css">
-        <script src="https://code.jquery-3.6.4.min.js"></script>
         <script src="index.js"></script>
+        <link rel="icon" type="image/x-icon" href="dog2.png">
     </head>
     <body style="background-color:rgb(243, 167, 239) ;">
     
-        <h1>
-            Dogs&Puppies
+        <h1 class="titlepage">
+            Dogtionary
         </h1>
-        <button id="changeStylesButton"><h2>dog nose</h2></button>
-        <p>
+        <h4>
             Dogs and puppies are so cute!!!!!!!!!!!
-        </p>
+        </h4>
         
-        <p>
+        <h4>
             Do you love dogs? then this website is for you!!!!!
-        </p>
+        </h4>
+
+
+        
         <td> <a href="sources.html"><p>sources</p></a></td>
+
+        <style>
+            /* Create the animation... */
+            @keyframes slide-in {
+              from {
+                transform: translateX(-100%);
+              }
+              to {
+                transform: translateX(0%);
+              }
+            }
+          
+            /* ...and then apply it: */
+            .box {
+              animation: slide-in 1000ms;
+              border-width: 4px;
+              background-color: rgb(139, 207, 255);
+              width: 100px;
+              height: 45px;
+            }
+          </style>
+          
+          <div class="box">
+        <H3>Dog Breeds</H3>
+          </div>
+
 
         <table>
             
@@ -36,7 +64,7 @@
 
     <td> <a href="dog.html"><p>POODLES</p></a></td>
     <td><a href="DogGR.html"><p>2. GOLDEN RETRIVERs</p></a></td></td>
-    <td><a href="dog.html"><p>3.LABRADORS</p></a></td>  </td>
+    <td><a href="DogLAB.html"><p>3.LABRADORS</p></a></td>  </td>
 
     </tr>
 

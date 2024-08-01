@@ -5,13 +5,27 @@
   75% { background-color: rgb(103, 74, 198);}
   100% { background-color: rgb(21, 0, 248);}
 }
+@font-face {
+  font-family: Title;
+  src: url(Lobster-Regular.ttf);
+}
+@font-face {
+  font-family: Noto;
+  src: url(LobsterTwo-Regular.ttf);
+}
 img {
     width: 50%;
 }
 body {
     background-color: #c837b9;
     color: rgb(34, 7, 39);
-    
+ font-family: Arial, Helvetica, sans-serif; 
+  padding: 15px;  
+}
+p {
+}
+h4{
+  text-align: center;
 }
 
 .green {
@@ -148,3 +162,76 @@ tr {
     transform: none;
   }
 }
+
+h1 {
+  text-align: center;
+  font-family: Title;
+  width: 100%;
+
+}
+
+.titlepage {
+  background-color: #62c1f4;
+  box-shadow: 3px 3px 3px#381dd2;
+  border-style:groove;
+  border-width: 10px;
+  border-color: #0412aa;
+}
+
+  /* Add a black background color to the top navigation */
+  .topnav3 {
+    position: relative;
+    background-color: #c300ff;
+    overflow: hidden;
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topnav3 a {
+    float: left;
+    color: #000000;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  /* Change the color of links on hover */
+  .topnav3 a:hover {
+    background-color: #0000ff;
+    color: rgb(255, 59, 206);
+  }
+  
+  /* Add a color to the active/current link */
+  .topnav3 a.active {
+    background-color: rgb(255, 254, 175);
+    color: rgb(0, 0, 0);
+  }
+  
+  /* Centered section inside the top navigation */
+  .topnav3-centered a {
+    float: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  /* Right-aligned section inside the top navigation */
+  .topnav3-right {
+    float: right;
+  }
+  
+  /* Responsive navigation menu - display links on top of each other instead of next to each other (for mobile devices) */
+  @media screen and (max-width: 600px) {
+    .topnav3 a, .topnav-right {
+      float: none;
+      display: block;
+    }
+  
+    .topnav3-centered a {
+      position: relative;
+      top: 0;
+      left: 0;
+      transform: none;
+    }
+  }
