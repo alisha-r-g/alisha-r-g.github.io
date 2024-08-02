@@ -5,6 +5,16 @@
   75% { background-color: rgb(103, 74, 198);}
   100% { background-color: rgb(21, 0, 248);}
 }
+
+
+@keyframes colors {
+  0% { color: pink;}
+  25% { color: rgb(220, 28, 159);}
+  50% { color: rgb(207, 50, 205);}
+  75% { color: rgb(103, 74, 198);}
+  100% { color: rgb(21, 0, 248);}
+}
+
 @font-face {
   font-family: Title;
   src: url(Lobster-Regular.ttf);
@@ -13,8 +23,57 @@
   font-family: Noto;
   src: url(LobsterTwo-Regular.ttf);
 }
+@font-face {
+  font-family: Dosis;
+  src: url(Dosis-VariableFont_wght.ttf);
+}
+
+
+@keyframes drop-in {
+  from {
+    transform:
+      rotate(-30deg) translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform:
+      rotate(0deg) translateY(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes grow-and-shrink {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.9);
+  }
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+
+
+.ggg {
+  animation: grow-and-shrink 2000ms;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
 img {
-    width: 50%;
+    width: 60%;
+    border-style: ridge;
+    border-width: 10px;
+    border-color: #1900ff;
+    
 }
 body {
     background-color: #c837b9;
@@ -22,8 +81,7 @@ body {
  font-family: Arial, Helvetica, sans-serif; 
   padding: 15px;  
 }
-p {
-}
+
 h4{
   text-align: center;
 }
@@ -41,8 +99,14 @@ body.dark-mode{
     color: aqua;
     
 }
+table{
+  width: 100%;
+  
+}
 td {
-    width: 33%;
+  width: 33%;
+    
+    
 }
 tr {
     width: 100%;
@@ -52,6 +116,7 @@ tr {
     position: relative;
     background-color: #0412aa;
     overflow: hidden;
+    animation: slide-in 2000ms;
   }
   
   /* Style the links inside the navigation bar */
@@ -62,12 +127,14 @@ tr {
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
+    animation: slide-in 2000ms;
   }
   
   /* Change the color of links on hover */
   .topnav a:hover {
     background-color: #ddd;
     color: rgb(229, 86, 189);
+    
   }
   
   /* Add a color to the active/current link */
@@ -83,11 +150,17 @@ tr {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    animation: slide-in 2000ms;
+  }
+  a {
+    font-family: Dosis;
+    font-weight: 700;
   }
   
   /* Right-aligned section inside the top navigation */
   .topnav-right {
     float: right;
+    animation: slide-in 2000ms;
   }
   
   /* Responsive navigation menu - display links on top of each other instead of next to each other (for mobile devices) */
@@ -95,6 +168,7 @@ tr {
     .topnav a, .topnav-right {
       float: none;
       display: block;
+      animation: slide-in 2000ms;
     }
   
     .topnav-centered a {
@@ -102,14 +176,18 @@ tr {
       top: 0;
       left: 0;
       transform: none;
+      animation: slide-in 2000ms;
     }
   }
+
+
 
   /* Add a black background color to the top navigation */
 .topnav2 {
   position: relative;
   background-color: #ec8338;
   overflow: hidden;
+  animation: slide-in 2000ms;
 }
 
 /* Style the links inside the navigation bar */
@@ -120,18 +198,21 @@ tr {
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
+  animation: slide-in 2000ms;
 }
 
 /* Change the color of links on hover */
 .topnav2 a:hover {
   background-color: #f3f788;
   color: rgb(229, 86, 193);
+  animation: slide-in 2000ms;
 }
 
 /* Add a color to the active/current link */
 .topnav2 a.active {
   background-color: rgb(255, 251, 36);
   color: rgb(0, 0, 0);
+  animation: slide-in 2000ms;
 }
 
 /* Centered section inside the top navigation */
@@ -146,6 +227,7 @@ tr {
 /* Right-aligned section inside the top navigation */
 .topnav2-right {
   float: right;
+  animation: slide-in 2000ms;
 }
 
 /* Responsive navigation menu - display links on top of each other instead of next to each other (for mobile devices) */
@@ -153,6 +235,7 @@ tr {
   .topnav2 a, .topnav-right {
     float: none;
     display: block;
+    animation: slide-in 2000ms;
   }
 
   .topnav2-centered a {
@@ -160,6 +243,7 @@ tr {
     top: 0;
     left: 0;
     transform: none;
+    animation: slide-in 2000ms;
   }
 }
 
@@ -171,6 +255,8 @@ h1 {
 }
 
 .titlepage {
+  animation: colors 2000ms;
+  animation-iteration-count: infinite;
   background-color: #62c1f4;
   box-shadow: 3px 3px 3px#381dd2;
   border-style:groove;
@@ -183,6 +269,7 @@ h1 {
     position: relative;
     background-color: #c300ff;
     overflow: hidden;
+    animation: slide-in 2000ms;
   }
   
   /* Style the links inside the navigation bar */
@@ -193,6 +280,7 @@ h1 {
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
+    animation: slide-in 2000ms;
   }
   
   /* Change the color of links on hover */
@@ -214,11 +302,13 @@ h1 {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    animation: slide-in 2000ms;
   }
   
   /* Right-aligned section inside the top navigation */
   .topnav3-right {
     float: right;
+    animation: slide-in 2000ms;
   }
   
   /* Responsive navigation menu - display links on top of each other instead of next to each other (for mobile devices) */
@@ -233,5 +323,6 @@ h1 {
       top: 0;
       left: 0;
       transform: none;
+      animation: slide-in 2000ms;
     }
   }
